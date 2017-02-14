@@ -3,6 +3,7 @@ from lxml import html
 import requests
 import time
 
+# Add TMS URLs here
 courses = ['',
 '',
 '',
@@ -17,7 +18,9 @@ courses = ['',
 print ' '
 print '[Class Enrollment Checker v0.1]'
 
+# For outputting results to log
 text_file = open("Output.txt", "a")
+
 for page in courses:
         web = requests.get(page)
         tree = html.fromstring(web.content)
